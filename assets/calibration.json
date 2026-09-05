@@ -1,0 +1,988 @@
+{
+ "version": 6.4,
+ "scale": {
+  "min": 1.0,
+  "max": 10.0,
+  "decimals": 2,
+  "block_weights": {
+   "harmony": 0.75,
+   "misc": 0.1,
+   "angles": 0.0,
+   "dimorphism": 0.15
+  },
+  "psl_curve": [
+   [
+    1.0,
+    1.0
+   ],
+   [
+    3.95,
+    1.9
+   ],
+   [
+    5.0,
+    3.2
+   ],
+   [
+    6.0,
+    5.0
+   ],
+   [
+    7.18,
+    7.82
+   ],
+   [
+    8.5,
+    8.6
+   ],
+   [
+    10.0,
+    9.4
+   ]
+  ],
+  "tier_halving_step": 1.0,
+  "hairline_correction": 1.11,
+  "max_tier": 5
+ },
+ "pose": {
+  "max_yaw_deg": 15.0,
+  "max_pitch_deg": 15.0,
+  "max_roll_deg": 20.0,
+  "warn_yaw_deg": 6.0,
+  "warn_pitch_deg": 6.0,
+  "warn_roll_deg": 8.0,
+  "correction_enabled": true
+ },
+ "lighting": {
+  "min_brightness": 40.0,
+  "max_brightness": 225.0,
+  "min_contrast": 25.0,
+  "clipped_ratio": 0.08
+ },
+ "metrics": [
+  {
+   "id": "esr",
+   "name_ru": "ESR (межзрачковое к ширине лица)",
+   "group": "frontal",
+   "block": "harmony",
+   "shape": "band",
+   "unit": "ratio",
+   "points": 35.0,
+   "band": {
+    "male": [
+     0.443,
+     0.473
+    ],
+    "female": [
+     0.443,
+     0.473
+    ]
+   },
+   "ideal": {
+    "male": 0.458,
+    "female": 0.458
+   },
+   "source": "looksmax.gg full measuring guide 13427; поправка разметки dlib выведена из ручных замеров карточки Чико, одна точка калибровки",
+   "landmark_correction": {
+    "scale": 1.021
+   }
+  },
+  {
+   "id": "canthal_tilt",
+   "name_ru": "Кантальный наклон",
+   "group": "frontal",
+   "block": "harmony",
+   "shape": "band",
+   "unit": "deg",
+   "points": 25.0,
+   "band": {
+    "male": [
+     5.0,
+     9.0
+    ],
+    "female": [
+     4.0,
+     8.0
+    ]
+   },
+   "ideal": {
+    "male": 7.0,
+    "female": 6.0
+   },
+   "source": "looksmax.gg full measuring guide 13427 / pslscale.net psl rating for women; поправка разметки dlib выведена из ручных замеров карточки Чико, одна точка калибровки",
+   "landmark_correction": {
+    "offset": 4.5
+   }
+  },
+  {
+   "id": "fwhr",
+   "name_ru": "FWHR (ширина к верхней высоте)",
+   "group": "frontal",
+   "block": "harmony",
+   "shape": "band",
+   "unit": "ratio",
+   "points": 25.0,
+   "band": {
+    "male": [
+     1.9,
+     2.06
+    ],
+    "female": [
+     1.75,
+     1.9
+    ]
+   },
+   "ideal": {
+    "male": 1.98,
+    "female": 1.825
+   },
+   "source": "looksmax.gg full measuring guide 13427 / pslscale.net psl rating for women; поправка разметки dlib выведена из ручных замеров карточки Чико, одна точка калибровки",
+   "landmark_correction": {
+    "scale": 1.06
+   }
+  },
+  {
+   "id": "jfa_angle",
+   "name_ru": "Челюстной фронтальный угол",
+   "group": "frontal",
+   "block": "harmony",
+   "shape": "band",
+   "unit": "deg",
+   "points": 25.0,
+   "band": {
+    "male": [
+     84.5,
+     95.0
+    ],
+    "female": [
+     84.5,
+     95.0
+    ]
+   },
+   "ideal": {
+    "male": 89.75,
+    "female": 89.75
+   },
+   "source": "looksmax.gg full measuring guide 13427; женская полоса в источниках не найдена, взята мужская; поправка разметки dlib выведена из ручных замеров карточки Чико, одна точка калибровки",
+   "landmark_correction": {
+    "offset": -5.4
+   }
+  },
+  {
+   "id": "cheekbone_height_ratio",
+   "name_ru": "Высота скул",
+   "group": "frontal",
+   "block": "harmony",
+   "shape": "band",
+   "unit": "ratio",
+   "points": 20.0,
+   "band": {
+    "male": [
+     0.81,
+     1.0
+    ],
+    "female": [
+     0.81,
+     1.0
+    ]
+   },
+   "ideal": {
+    "male": 0.905,
+    "female": 0.905
+   },
+   "source": "looksmax.gg full measuring guide 13427; поправка разметки dlib выведена из ручных замеров карточки Чико, одна точка калибровки",
+   "landmark_correction": {
+    "scale": 1.19
+   }
+  },
+  {
+   "id": "tfwhr",
+   "name_ru": "tFWHR (ширина к полной высоте)",
+   "group": "frontal",
+   "block": "harmony",
+   "shape": "band",
+   "unit": "ratio",
+   "points": 15.0,
+   "band": {
+    "male": [
+     1.33,
+     1.38
+    ],
+    "female": [
+     1.33,
+     1.38
+    ]
+   },
+   "ideal": {
+    "male": 1.355,
+    "female": 1.355
+   },
+   "source": "looksmax.gg full measuring guide 13427; женская полоса в источниках не найдена, взята мужская; высота лица от линии волос скорректирована",
+   "landmark_correction": {}
+  },
+  {
+   "id": "bigonial_bizygomatic",
+   "name_ru": "Бигониальная к скуловой",
+   "group": "frontal",
+   "block": "harmony",
+   "shape": "band",
+   "unit": "ratio",
+   "points": 15.0,
+   "band": {
+    "male": [
+     0.855,
+     0.92
+    ],
+    "female": [
+     0.855,
+     0.92
+    ]
+   },
+   "ideal": {
+    "male": 0.8875,
+    "female": 0.8875
+   },
+   "source": "looksmax.gg full measuring guide 13427; женская полоса в источниках не найдена, взята мужская",
+   "landmark_correction": {}
+  },
+  {
+   "id": "chin_philtrum",
+   "name_ru": "Подбородок к фильтруму",
+   "group": "frontal",
+   "block": "harmony",
+   "shape": "band",
+   "unit": "ratio",
+   "points": 12.5,
+   "band": {
+    "male": [
+     2.05,
+     2.55
+    ],
+    "female": [
+     2.05,
+     2.55
+    ]
+   },
+   "ideal": {
+    "male": 2.3,
+    "female": 2.3
+   },
+   "source": "looksmax.gg full measuring guide 13427; женская полоса в источниках не найдена, взята мужская; поправка разметки dlib выведена из ручных замеров карточки Чико, одна точка калибровки",
+   "landmark_correction": {
+    "scale": 0.8
+   }
+  },
+  {
+   "id": "mouth_nose",
+   "name_ru": "Ширина рта к ширине носа",
+   "group": "frontal",
+   "block": "harmony",
+   "shape": "band",
+   "unit": "ratio",
+   "points": 10.0,
+   "band": {
+    "male": [
+     1.38,
+     1.53
+    ],
+    "female": [
+     1.38,
+     1.53
+    ]
+   },
+   "ideal": {
+    "male": 1.455,
+    "female": 1.455
+   },
+   "source": "looksmax.gg full measuring guide 13427; поправка разметки dlib выведена из ручных замеров карточки Чико, одна точка калибровки",
+   "landmark_correction": {
+    "scale": 0.715
+   }
+  },
+  {
+   "id": "midface_ratio",
+   "name_ru": "Мидфейс (межзрачковое к высоте)",
+   "group": "frontal",
+   "block": "harmony",
+   "shape": "band",
+   "unit": "ratio",
+   "points": 10.0,
+   "band": {
+    "male": [
+     0.95,
+     1.01
+    ],
+    "female": [
+     0.95,
+     1.01
+    ]
+   },
+   "ideal": {
+    "male": 0.98,
+    "female": 0.98
+   },
+   "source": "looksmax.gg full measuring guide 13427",
+   "landmark_correction": {}
+  },
+  {
+   "id": "eyebrow_position_ratio",
+   "name_ru": "Посадка бровей в высотах глаза",
+   "group": "frontal",
+   "block": "harmony",
+   "shape": "band",
+   "unit": "ratio",
+   "points": 10.0,
+   "band": {
+    "male": [
+     0.0,
+     0.66
+    ],
+    "female": [
+     0.0,
+     0.66
+    ]
+   },
+   "ideal": {
+    "male": 0.33,
+    "female": 0.33
+   },
+   "source": "looksmax.org ideal ratios for men 1153183 (CreatingAttractive); женская полоса в источниках не найдена, взята мужская; поправка разметки dlib выведена из ручных замеров карточки Чико, одна точка калибровки",
+   "landmark_correction": {
+    "scale": 0.28
+   }
+  },
+  {
+   "id": "eye_spacing",
+   "name_ru": "Расстояние между глазами",
+   "group": "frontal",
+   "block": "harmony",
+   "shape": "band",
+   "unit": "ratio",
+   "points": 10.0,
+   "band": {
+    "male": [
+     0.93,
+     1.04
+    ],
+    "female": [
+     0.93,
+     1.04
+    ]
+   },
+   "ideal": {
+    "male": 0.985,
+    "female": 0.985
+   },
+   "source": "looksmax.gg full measuring guide 13427; поправка разметки dlib выведена из ручных замеров карточки Чико, одна точка калибровки",
+   "landmark_correction": {
+    "scale": 0.65
+   }
+  },
+  {
+   "id": "pfl_pfh",
+   "name_ru": "Форма глаза (длина к высоте)",
+   "group": "frontal",
+   "block": "harmony",
+   "shape": "band",
+   "unit": "ratio",
+   "points": 10.0,
+   "band": {
+    "male": [
+     3.0,
+     3.5
+    ],
+    "female": [
+     3.0,
+     3.5
+    ]
+   },
+   "ideal": {
+    "male": 3.25,
+    "female": 3.25
+   },
+   "source": "looksmax.gg full measuring guide 13427; поправка разметки dlib выведена из ручных замеров карточки Чико, одна точка калибровки",
+   "landmark_correction": {
+    "scale": 0.95
+   }
+  },
+  {
+   "id": "medial_canthal_angle",
+   "name_ru": "Медиальный кантальный угол",
+   "group": "frontal",
+   "block": "harmony",
+   "shape": "band",
+   "unit": "deg",
+   "points": 10.0,
+   "band": {
+    "male": [
+     20.0,
+     42.0
+    ],
+    "female": [
+     20.0,
+     42.0
+    ]
+   },
+   "ideal": {
+    "male": 31.0,
+    "female": 31.0
+   },
+   "source": "looksmax.gg full measuring guide 13427",
+   "landmark_correction": {}
+  },
+  {
+   "id": "mouth_aspect_ratio",
+   "name_ru": "Высота рта к ширине",
+   "group": "frontal",
+   "block": "harmony",
+   "shape": "band",
+   "unit": "ratio",
+   "points": 10.0,
+   "band": {
+    "male": [
+     0.32,
+     0.52
+    ],
+    "female": [
+     0.32,
+     0.54
+    ]
+   },
+   "ideal": {
+    "male": 0.42,
+    "female": 0.43
+   },
+   "source": "карточка замеров Чико; полоса в источниках не найдена",
+   "landmark_correction": {}
+  },
+  {
+   "id": "lip_ratio",
+   "name_ru": "Нижняя губа к верхней",
+   "group": "frontal",
+   "block": "harmony",
+   "shape": "band",
+   "unit": "ratio",
+   "points": 7.5,
+   "band": {
+    "male": [
+     1.4,
+     2.0
+    ],
+    "female": [
+     1.4,
+     2.0
+    ]
+   },
+   "ideal": {
+    "male": 1.7,
+    "female": 1.7
+   },
+   "source": "looksmax.gg full measuring guide 13427; поправка разметки dlib выведена из ручных замеров карточки Чико, одна точка калибровки",
+   "landmark_correction": {
+    "scale": 0.85
+   }
+  },
+  {
+   "id": "iaa_jfa_deviation",
+   "name_ru": "Отклонение IAA от JFA",
+   "group": "frontal",
+   "block": "harmony",
+   "shape": "band",
+   "unit": "deg",
+   "points": 7.0,
+   "band": {
+    "male": [
+     0.0,
+     2.5
+    ],
+    "female": [
+     0.0,
+     2.5
+    ]
+   },
+   "ideal": {
+    "male": 1.25,
+    "female": 1.25
+   },
+   "source": "looksmax.gg full measuring guide 13427",
+   "landmark_correction": {}
+  },
+  {
+   "id": "brow_tilt",
+   "name_ru": "Наклон бровей",
+   "group": "frontal",
+   "block": "harmony",
+   "shape": "band",
+   "unit": "deg",
+   "points": 6.0,
+   "band": {
+    "male": [
+     5.0,
+     13.0
+    ],
+    "female": [
+     5.0,
+     13.0
+    ]
+   },
+   "ideal": {
+    "male": 9.0,
+    "female": 9.0
+   },
+   "source": "looksmax.gg full measuring guide 13427; женская полоса в источниках не найдена, взята мужская; поправка разметки dlib выведена из ручных замеров карточки Чико, одна точка калибровки",
+   "landmark_correction": {
+    "offset": 9.5
+   }
+  },
+  {
+   "id": "lower_third_ratio",
+   "name_ru": "Нижняя треть лица",
+   "group": "frontal",
+   "block": "harmony",
+   "shape": "band",
+   "unit": "ratio",
+   "points": 5.0,
+   "band": {
+    "male": [
+     0.306,
+     0.34
+    ],
+    "female": [
+     0.306,
+     0.34
+    ]
+   },
+   "ideal": {
+    "male": 0.323,
+    "female": 0.323
+   },
+   "source": "looksmax.gg full measuring guide 13427; высота лица от линии волос скорректирована",
+   "landmark_correction": {}
+  },
+  {
+   "id": "iaa_angle",
+   "name_ru": "Ипсилатеральный альярный угол",
+   "group": "frontal",
+   "block": "harmony",
+   "shape": "band",
+   "unit": "deg",
+   "points": 2.5,
+   "band": {
+    "male": [
+     85.0,
+     95.0
+    ],
+    "female": [
+     85.0,
+     95.0
+    ]
+   },
+   "ideal": {
+    "male": 90.0,
+    "female": 90.0
+   },
+   "source": "looksmax.gg full measuring guide 13427",
+   "landmark_correction": {}
+  },
+  {
+   "id": "skin",
+   "name_ru": "Качество кожи",
+   "group": "frontal",
+   "block": "misc",
+   "shape": "percent",
+   "unit": "percent",
+   "points": 10.0,
+   "band": {
+    "male": [
+     70.0,
+     100.0
+    ],
+    "female": [
+     70.0,
+     100.0
+    ]
+   },
+   "ideal": {
+    "male": 85.0,
+    "female": 85.0
+   },
+   "source": "engine.metrics.skin, шкала движка",
+   "landmark_correction": {}
+  },
+  {
+   "id": "symmetry",
+   "name_ru": "Симметрия лица",
+   "group": "frontal",
+   "block": "misc",
+   "shape": "percent",
+   "unit": "percent",
+   "points": 10.0,
+   "band": {
+    "male": [
+     92.0,
+     100.0
+    ],
+    "female": [
+     92.0,
+     100.0
+    ]
+   },
+   "ideal": {
+    "male": 96.0,
+    "female": 96.0
+   },
+   "source": "engine.metrics.frontal, шкала движка",
+   "landmark_correction": {}
+  },
+  {
+   "id": "dimorphism",
+   "name_ru": "Половой диморфизм",
+   "group": "frontal",
+   "block": "dimorphism",
+   "shape": "percent",
+   "unit": "percent",
+   "points": 10.0,
+   "band": {
+    "male": [
+     58.0,
+     98.0
+    ],
+    "female": [
+     35.0,
+     75.0
+    ]
+   },
+   "ideal": {
+    "male": 78.0,
+    "female": 55.0
+   },
+   "source": "engine.metrics.frontal, шкала движка",
+   "landmark_correction": {}
+  },
+  {
+   "id": "nasofrontal_angle",
+   "name_ru": "Назофронтальный угол",
+   "group": "profile",
+   "block": "angles",
+   "shape": "band",
+   "unit": "deg",
+   "points": 10.0,
+   "band": {
+    "male": [
+     115.0,
+     130.0
+    ],
+    "female": [
+     120.0,
+     140.0
+    ]
+   },
+   "ideal": {
+    "male": 122.5,
+    "female": 130.0
+   },
+   "source": "Powell, Humphreys via Leong, White 2006 / Uzun 2014, Turkish adults",
+   "landmark_correction": {}
+  },
+  {
+   "id": "nasolabial_angle",
+   "name_ru": "Назолабиальный угол",
+   "group": "profile",
+   "block": "angles",
+   "shape": "band",
+   "unit": "deg",
+   "points": 10.0,
+   "band": {
+    "male": [
+     94.0,
+     110.0
+    ],
+    "female": [
+     100.0,
+     116.0
+    ]
+   },
+   "ideal": {
+    "male": 102.0,
+    "female": 108.0
+   },
+   "source": "Legan, Burstone 1980 / Anic-Milosevic 2008, soft tissue profile angular analysis",
+   "landmark_correction": {}
+  },
+  {
+   "id": "nasofacial_angle",
+   "name_ru": "Назофациальный угол",
+   "group": "profile",
+   "block": "angles",
+   "shape": "band",
+   "unit": "deg",
+   "points": 10.0,
+   "band": {
+    "male": [
+     30.0,
+     40.0
+    ],
+    "female": [
+     30.0,
+     40.0
+    ]
+   },
+   "ideal": {
+    "male": 35.0,
+    "female": 35.0
+   },
+   "source": "Powell, Humphreys via Leong, White 2006",
+   "landmark_correction": {}
+  },
+  {
+   "id": "nasomental_angle",
+   "name_ru": "Назоментальный угол",
+   "group": "profile",
+   "block": "angles",
+   "shape": "band",
+   "unit": "deg",
+   "points": 10.0,
+   "band": {
+    "male": [
+     120.0,
+     132.0
+    ],
+    "female": [
+     120.0,
+     132.0
+    ]
+   },
+   "ideal": {
+    "male": 126.0,
+    "female": 126.0
+   },
+   "source": "Powell, Humphreys via Leong, White 2006",
+   "landmark_correction": {}
+  },
+  {
+   "id": "mentolabial_angle",
+   "name_ru": "Ментолабиальный угол",
+   "group": "profile",
+   "block": "angles",
+   "shape": "band",
+   "unit": "deg",
+   "points": 10.0,
+   "band": {
+    "male": [
+     108.0,
+     130.0
+    ],
+    "female": [
+     120.0,
+     140.0
+    ]
+   },
+   "ideal": {
+    "male": 119.0,
+    "female": 130.0
+   },
+   "source": "Anic-Milosevic 2008, soft tissue profile angular analysis",
+   "landmark_correction": {}
+  },
+  {
+   "id": "facial_convexity",
+   "name_ru": "Выпуклость лица",
+   "group": "profile",
+   "block": "angles",
+   "shape": "band",
+   "unit": "deg",
+   "points": 10.0,
+   "band": {
+    "male": [
+     165.0,
+     175.0
+    ],
+    "female": [
+     165.0,
+     175.0
+    ]
+   },
+   "ideal": {
+    "male": 170.0,
+    "female": 170.0
+   },
+   "source": "Arnett, Bergman via Riveiro 2010",
+   "landmark_correction": {}
+  },
+  {
+   "id": "total_convexity",
+   "name_ru": "Полная выпуклость лица",
+   "group": "profile",
+   "block": "angles",
+   "shape": "band",
+   "unit": "deg",
+   "points": 10.0,
+   "band": {
+    "male": [
+     136.0,
+     147.0
+    ],
+    "female": [
+     136.0,
+     147.0
+    ]
+   },
+   "ideal": {
+    "male": 141.5,
+    "female": 141.5
+   },
+   "source": "Legan, Burstone 1980",
+   "landmark_correction": {}
+  },
+  {
+   "id": "nasal_tip_angle",
+   "name_ru": "Угол кончика носа",
+   "group": "profile",
+   "block": "angles",
+   "shape": "band",
+   "unit": "deg",
+   "points": 10.0,
+   "band": {
+    "male": [
+     103.0,
+     113.0
+    ],
+    "female": [
+     104.0,
+     115.0
+    ]
+   },
+   "ideal": {
+    "male": 108.0,
+    "female": 109.5
+   },
+   "source": "looksmax.org ideal ratios for men 1153183 (CreatingAttractive)",
+   "landmark_correction": {}
+  },
+  {
+   "id": "cervicomental_angle",
+   "name_ru": "Цервикоментальный угол",
+   "group": "profile",
+   "block": "angles",
+   "shape": "band",
+   "unit": "deg",
+   "points": 10.0,
+   "band": {
+    "male": [
+     90.0,
+     110.0
+    ],
+    "female": [
+     90.0,
+     110.0
+    ]
+   },
+   "ideal": {
+    "male": 100.0,
+    "female": 100.0
+   },
+   "source": "looksmax.org ideal ratios for men 1153183 (CreatingAttractive)",
+   "landmark_correction": {}
+  },
+  {
+   "id": "gonial_angle",
+   "name_ru": "Гониальный угол",
+   "group": "profile",
+   "block": "angles",
+   "shape": "band",
+   "unit": "deg",
+   "points": 10.0,
+   "band": {
+    "male": [
+     110.0,
+     122.0
+    ],
+    "female": [
+     120.0,
+     128.0
+    ]
+   },
+   "ideal": {
+    "male": 116.0,
+    "female": 124.0
+   },
+   "source": "looksmax.org ideal ratios for men 1153183 (CreatingAttractive) / pslscale.net psl rating for women",
+   "landmark_correction": {}
+  },
+  {
+   "id": "nasal_projection",
+   "name_ru": "Проекция носа",
+   "group": "profile",
+   "block": "angles",
+   "shape": "band",
+   "unit": "ratio",
+   "points": 10.0,
+   "band": {
+    "male": [
+     0.55,
+     0.6
+    ],
+    "female": [
+     0.55,
+     0.6
+    ]
+   },
+   "ideal": {
+    "male": 0.575,
+    "female": 0.575
+   },
+   "source": "Goode ratio",
+   "landmark_correction": {}
+  },
+  {
+   "id": "eline_upper",
+   "name_ru": "Линия E, верхняя губа",
+   "group": "profile",
+   "block": "angles",
+   "shape": "band",
+   "unit": "ratio",
+   "points": 10.0,
+   "band": {
+    "male": [
+     -6.0,
+     -2.0
+    ],
+    "female": [
+     -6.0,
+     -2.0
+    ]
+   },
+   "ideal": {
+    "male": -4.0,
+    "female": -4.0
+   },
+   "source": "Ricketts E-line",
+   "landmark_correction": {}
+  },
+  {
+   "id": "eline_lower",
+   "name_ru": "Линия E, нижняя губа",
+   "group": "profile",
+   "block": "angles",
+   "shape": "band",
+   "unit": "ratio",
+   "points": 10.0,
+   "band": {
+    "male": [
+     -4.0,
+     0.0
+    ],
+    "female": [
+     -4.0,
+     0.0
+    ]
+   },
+   "ideal": {
+    "male": -2.0,
+    "female": -2.0
+   },
+   "source": "Ricketts E-line",
+   "landmark_correction": {}
+  }
+ ]
+}
